@@ -11,5 +11,5 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{yml,yaml}]
+php artisan serve --host 0.0.0.0 --port 8081
 indent_size = 2
