@@ -11,3 +11,11 @@ window.axios.interceptors.request.use(config => {
 
   return config
 })
+
+// axiosのresponseインターセプターはレスポンスを受けた後の処理を上書きする
+// 第一引数が成功時の処理だが、こちらは変更しないのでそのままresponseを返している
+// 第二引数は失敗時の処理で、こちらを変更している
+window.axios.interceptors.response.use(
+  response => response,
+  error => error.response || error
+)
